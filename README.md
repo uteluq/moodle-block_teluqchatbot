@@ -11,29 +11,24 @@
 - **Contextual Responses**: With RAG enabled, the chatbot provides accurate, course-specific answers by retrieving relevant information from uploaded course materials.
 
 
-<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/interface.png" alt="isolated" width="20%"/>
-
 ### Teacher Role
 - **Course Upload**: Teachers can upload multiple PDF course resources simultaneously, which the chatbot uses to generate informed responses.
 - **Prompt Customization**: Teachers can modify the default prompt to tailor the chatbot’s behavior, supported by a provided Prompt Design Guide.
 - **Testing Functionality**: Teachers can test the chatbot by posing questions to verify its performance with uploaded resources.
 
 
-<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/prompt.png" alt="isolated" width="20%"/>
 
 
 ### Administrative Manager Role
-- **Plugin Configuration**: Admins configure the plugin via Moodle’s site administration interface, setting up API keys for services like OpenAI, Cohere Embedding, Adobe PDF Services, and Weaviate (see Figure 7).
+- **Plugin Configuration**: Admins configure the plugin via Moodle’s site administration interface, setting up API keys for services like OpenAI, Cohere Embedding, Adobe PDF Services, and Weaviate.
 - **Seamless Integration**: The plugin is accessible under the “Plugins” section of Moodle’s admin panel for easy management.
 
-<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/keys.png" alt="isolated" width="20%"/>
 
 
 ### RAG Integration
-- **With RAG**: Enhances response accuracy, relevance, and completeness by retrieving course-specific data from a vector database before generating answers (see test results in the project report).
+- **With RAG**: Enhances response accuracy, relevance, and completeness by retrieving course-specific data from a vector database before generating answers.
 - **Without RAG**: Provides general responses based on the model’s internal knowledge, suitable for quick interactions but less precise for course-specific queries.
 
-<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/rag.png" alt="isolated" width="20%"/>
 
 
 ## Installation
@@ -49,25 +44,36 @@
 
 3. **Configure the Plugin**:
    - Go to **Site Administration > Plugins > Blocks > TeluqChatbot**.
-   - Enter the required API keys for OpenAI, Cohere Embedding, Adobe PDF Services, and Weaviate (see Figure 7).
+   - Enter the required API keys for OpenAI, Cohere Embedding, Adobe PDF Services, and Weaviate.
    - Save the settings to activate the plugin.
 
 ## Usage
 
 ### For Learners
 1. Access the chatbot block on a course page.
-2. Pose questions related to course content in the provided text box (see Figure 1).
+2. Pose questions related to course content in the provided text box.
 3. Toggle between **RAG** and **non-RAG** modes to compare response quality if testing.
 
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/interface.png" alt="isolated" width="20%"/>
+
+
 ### For Teachers
-1. From the chatbot interface, click **Upload Course** to add PDF resources (see Figures 2 and 3).
-2. Click **Modify Prompt** to customize the chatbot’s response behavior, referring to the [Prompt Design Guide](#) (see Figures 4 and 5).
-3. Test the chatbot by asking questions to ensure it aligns with course content (see Figure 6).
+1. From the chatbot interface, click **Upload Course** to add PDF resources.
+2. Click **Modify Prompt** to customize the chatbot’s response behavior, referring to the Prompt Design Guide.
+3. Test the chatbot by asking questions to ensure it aligns with course content.
+
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/rag.png" alt="isolated" width="20%"/>
+
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/prompt.png" alt="isolated" width="20%"/>
+
 
 ### For Admins
 1. Access **Site Administration > Plugins > Blocks > TeluqChatbot**.
-2. Configure API keys and other settings as needed (see Figure 7).
+2. Configure API keys and other settings as needed.
 3. Monitor plugin performance and ensure API services are operational.
+
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/keys.png" alt="isolated" width="20%"/>
+
 
 ## Testing and Validation
 
@@ -75,7 +81,7 @@ The plugin has been rigorously tested in both academic and AWS cloud environment
 - **RAG Mode**: Outperforms non-RAG mode in precision, relevance, completeness, and pedagogical utility, with clear, context-aware responses and no noticeable latency.
 - **Non-RAG Mode**: Offers satisfactory clarity and speed but may provide less accurate or overly general responses for course-specific queries.
 
-A detailed testing protocol is available (see project report, Section 3.2), with evaluation criteria including:
+A detailed testing protocol will be published, with evaluation criteria including:
 - Precision, relevance, clarity, and completeness of responses.
 - Response time, dialogue coherence, and pedagogical utility.
 - Comparative testing with and without RAG, using provided course PDFs.
@@ -95,7 +101,7 @@ A detailed testing protocol is available (see project report, Section 3.2), with
 
 ### Web Services
 
-The **TeluqChatbot** Moodle block plugin integrates several web services to support its functionality, as outlined in the project report (Page 8). These services are configured via the plugin's administrative interface and are essential for processing course materials, generating responses, and enabling Retrieval-Augmented Generation (RAG). Below is a list of the web services used:
+The **TeluqChatbot** Moodle block plugin integrates several web services to support its functionality, as outlined in the project report. These services are configured via the plugin's administrative interface and are essential for processing course materials, generating responses, and enabling Retrieval-Augmented Generation (RAG). Below is a list of the web services used:
 
 - **OpenAI API**:
   - **Purpose**: Drives the language model to generate responses for user queries in both RAG and non-RAG modes.
