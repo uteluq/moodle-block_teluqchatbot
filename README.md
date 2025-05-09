@@ -79,6 +79,30 @@ A detailed testing protocol is available (see project report, Section 3.2), with
 - **Server**: Deployable on standard Moodle servers or AWS for scalability.
 - **Empathy Evaluation**: Assessing perceived empathy in learner interactions with the chatbot.
 
+
+### Web Services
+
+The **TeluqChatbot** Moodle block plugin integrates several web services to support its functionality, as outlined in the project report (Page 8). These services are configured via the plugin's administrative interface and are essential for processing course materials, generating responses, and enabling Retrieval-Augmented Generation (RAG). Below is a list of the web services used:
+
+- **OpenAI API**:
+  - **Purpose**: Drives the language model to generate responses for user queries in both RAG and non-RAG modes.
+  - **Configuration**: Requires an API key entered in the plugin’s admin settings (see Figure 7).
+
+- **Cohere Embedding API**:
+  - **Purpose**: Creates embeddings for course content, enabling storage and retrieval in a vector database for RAG-based contextual responses.
+  - **Configuration**: Requires an API key entered in the plugin’s admin settings.
+
+- **Adobe PDF Services**:
+  - **Purpose**: Processes uploaded PDF course materials to extract content for response generation.
+  - **Configuration**: Requires a client ID and client secret entered in the plugin’s admin settings.
+
+- **Weaviate**:
+  - **Purpose**: Acts as the vector database to store content embeddings, supporting the retrieval component of RAG for contextual responses.
+  - **Configuration**: Requires API key(s) entered in the plugin’s admin settings (note: multiple entries in the report may indicate an OCR error or distinct keys).
+
+- Configuration is managed through **Site Administration > Plugins > Blocks > TeluqChatbot** in Moodle.
+
+
 ## Contributing
 
 Contributions are welcome! To contribute:
