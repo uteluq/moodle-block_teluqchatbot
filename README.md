@@ -7,21 +7,34 @@
 ## Features
 
 ### Learner Role
-- **Interactive Q&A**: Learners can ask questions about course content, receive clarifications, revise exercises, and get study method suggestions via a user-friendly interface (see Figure 1 in the project report).
+- **Interactive Q&A**: Learners can ask questions about course content, receive clarifications, revise exercises, and get study method suggestions via a user-friendly interface.
 - **Contextual Responses**: With RAG enabled, the chatbot provides accurate, course-specific answers by retrieving relevant information from uploaded course materials.
 
+
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/interface.png" alt="isolated" width="20%"/>
+
 ### Teacher Role
-- **Course Upload**: Teachers can upload multiple PDF course resources simultaneously, which the chatbot uses to generate informed responses (see Figures 2 and 3).
-- **Prompt Customization**: Teachers can modify the default prompt to tailor the chatbot’s behavior, supported by a provided [Prompt Design Guide](#) (see Figures 4 and 5).
-- **Testing Functionality**: Teachers can test the chatbot by posing questions to verify its performance with uploaded resources (see Figure 6).
+- **Course Upload**: Teachers can upload multiple PDF course resources simultaneously, which the chatbot uses to generate informed responses.
+- **Prompt Customization**: Teachers can modify the default prompt to tailor the chatbot’s behavior, supported by a provided Prompt Design Guide.
+- **Testing Functionality**: Teachers can test the chatbot by posing questions to verify its performance with uploaded resources.
+
+
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/prompt.png" alt="isolated" width="20%"/>
+
 
 ### Administrative Manager Role
 - **Plugin Configuration**: Admins configure the plugin via Moodle’s site administration interface, setting up API keys for services like OpenAI, Cohere Embedding, Adobe PDF Services, and Weaviate (see Figure 7).
 - **Seamless Integration**: The plugin is accessible under the “Plugins” section of Moodle’s admin panel for easy management.
 
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/keys.png" alt="isolated" width="20%"/>
+
+
 ### RAG Integration
 - **With RAG**: Enhances response accuracy, relevance, and completeness by retrieving course-specific data from a vector database before generating answers (see test results in the project report).
 - **Without RAG**: Provides general responses based on the model’s internal knowledge, suitable for quick interactions but less precise for course-specific queries.
+
+<img src="https://raw.githubusercontent.com/uteluq/moodle-block_teluqchatbot/main/screenshots/rag.png" alt="isolated" width="20%"/>
+
 
 ## Installation
 
